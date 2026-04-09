@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Independent investigative report on the Drift Protocol security failure. Join the consolidated claim and hold the protocol accountable.">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+        <title>Drift Victims Committee | $285M Exploit Investigation</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+            .card-shadow { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        </style>
+    </head>
+    <body class="bg-slate-900 text-slate-200 font-sans">
+
+        <header class="border-b border-slate-700 py-6 px-4 sticky top-0 bg-slate-900/90 backdrop-blur-md z-50">
+            <div class="max-w-6xl mx-auto flex justify-between items-center">
+                <h1 class="text-xl font-bold tracking-tight text-white uppercase">Drift <span class="text-red-500">Victims</span> Committee</h1>
+                
+                <nav class="flex items-center gap-4">
+                    <a href="https://x.com/DriftVictims" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-700 hover:border-blue-400 hover:text-blue-400 transition-all bg-slate-800/50 text-slate-400" title="Follow updates on X">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </svg>
+                    </a>
+
+                    <a href="https://t.me/DriftVictimsNews" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-700 hover:border-sky-400 hover:text-sky-400 transition-all bg-slate-800/50 text-slate-400" title="Join Telegram Community">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"></path>
+                        </svg>
+                    </a>
+
+                    <a href="https://github.com/DriftVictimsCommittee" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full border border-slate-700 hover:border-white hover:text-white transition-all bg-slate-800/50 text-slate-400" title="View Forensic Audit on GitHub">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                        </svg>
+                    </a>
+                </nav>
+
+            </div>
+        </header>
+
+        <section class="py-12 md:py-24 px-4 gradient-bg border-b border-slate-800">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                
+                <div class="lg:col-span-3 text-left">
+                    <h2 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+                        $285M Exploit: <br>
+                        <span class="text-red-500 text-3xl uppercase tracking-tighter">The Case for Gross Negligence</span>
+                    </h2>
+                    <p class="text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl">
+                        Evidence of systemic security failures and administrative negligence within Drift Protocol. We represent the global community of affected users in seeking full asset recovery.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://github.com/DriftVictimsCommittee/drift-forensics" target="_blank" class="bg-white text-slate-900 px-8 py-4 font-bold text-lg hover:bg-slate-200 transition-all text-center">
+                            Read Forensic Audit
+                        </a>
+                        <a href="https://tally.so/r/eq20B0" target="_blank" class="bg-slate-800 text-white border border-slate-700 px-8 py-4 font-bold text-lg hover:bg-slate-700 transition-all text-center">
+                            Submit Damage Ledger
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="bg-red-950/20 border border-red-500/40  p-8 md:p-10 text-center shadow-[0_0_50px_rgba(239,68,68,0.15)] backdrop-blur-sm relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-red-500/20 animate-pulse"></div>
+                        
+                        <h3 class="text-red-500 uppercase tracking-[0.2em] text-xs font-black mb-6 opacity-80">
+                            Funds Locked Since Exploit
+                        </h3>
+                        
+                        <div id="timer" class="text-3xl md:text-5xl lg:text-6xl font-mono font-black text-white tracking-tighter mb-4">
+                            00d 00h 00m 00s
+                        </div>
+                        
+                        <p class="text-slate-500 text-xs font-mono uppercase">
+                            April 1, 2026 • Systemic Liquidity Breach
+                        </p>
+
+                        <div class="mt-8 pt-6 border-t border-red-900/30">
+                            <span class="text-red-500/70 text-[10px] font-bold uppercase tracking-widest">Live Investigation Status: ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 px-4 bg-slate-900">
+            <div class="max-w-6xl mx-auto">
+                <h3 class="text-3xl font-bold text-white mb-12 text-center">Key Investigative Findings</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-800 p-8 border border-slate-700 card-shadow">
+                        <div class="text-red-500 mb-4 text-3xl font-bold">01</div>
+                        <h4 class="text-xl font-bold text-white mb-3">Privileged Access Abuse</h4>
+                        <p class="text-slate-400">Forensic evidence indicates an intentional bypass of security protocols, contradicting the protocol's claims of decentralization.</p>
+                    </div>
+
+                    <div class="bg-slate-800 p-8 border border-slate-700 card-shadow">
+                        <div class="text-red-500 mb-4 text-3xl font-bold">02</div>
+                        <h4 class="text-xl font-bold text-white mb-3">Gross Negligence</h4>
+                        <p class="text-slate-400">Public admissions of operational failure and direct collaboration with entities involved in the exploitation demonstrate a reckless disregard for the security of user assets.</p>
+                    </div>
+
+                    <div class="bg-slate-800 p-8 border border-slate-700 card-shadow">
+                        <div class="text-red-500 mb-4 text-3xl font-bold">03</div>
+                        <h4 class="text-xl font-bold text-white mb-3">Asset Recovery Path</h4>
+                        <p class="text-slate-400">Clear on-chain mapping provides the forensic foundation needed to enforce protocol accountability and mandatory restitution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 px-4 border-y border-slate-800 bg-slate-900/50">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center justify-between mb-12">
+                    <div>
+                        <h3 class="text-3xl font-bold text-white mb-2">Transparency & Communication Log</h3>
+                        <p class="text-slate-400 text-sm italic">Monitoring the flow of information and management engagement levels.</p>
+                    </div>
+                    <div class="bg-blue-500/10 border border-blue-500/50 text-blue-500 px-4 py-1 text-xs font-bold uppercase tracking-widest animate-pulse">
+                        Monitoring
+                    </div>
+                </div>
+
+                <div class="space-y-6 relative">
+                    <div class="absolute left-[17px] top-2 bottom-2 w-0.5 bg-slate-800"></div>
+
+                    <div class="relative pl-12">
+                        <div class="absolute left-0 top-1.5 w-9 h-9 bg-slate-900 border-2 border-slate-700 rounded-full flex items-center justify-center z-10">
+                            <span class="text-slate-500 font-bold text-xs">!</span>
+                        </div>
+                        <div class="bg-slate-800/40 border border-slate-700 p-5 hover:border-slate-500/30 transition-all">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-white font-bold">Restrictive Access Policies</span>
+                                <span class="text-slate-500 text-xs font-mono">Ongoing</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Official community channels have implemented restrictive entry requirements, effectively isolating management from the growing influx of affected users.
+                            </p>
+                            <div class="mt-3 inline-flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
+                                Status: Communication Barrier
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-12">
+                        <div class="absolute left-0 top-1.5 w-9 h-9 bg-slate-900 border-2 border-slate-700 rounded-full flex items-center justify-center z-10">
+                            <span class="text-slate-500 font-bold text-xs">i</span>
+                        </div>
+                        <div class="bg-slate-800/40 border border-slate-700 p-5 hover:border-slate-500/30 transition-all">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-white font-bold">Suspension of Public Dialogue</span>
+                                <span class="text-slate-500 text-xs font-mono">Post-Exploit</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Zero live AMAs or interactive sessions have been held by top management to address user concerns regarding asset recovery and protocol insolvency.
+                            </p>
+                            <div class="mt-3 inline-flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
+                                Status: Engagement Gap
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative pl-12">
+                        <div class="absolute left-0 top-1.5 w-9 h-9 bg-slate-900 border-2 border-yellow-600/50 rounded-full flex items-center justify-center z-10">
+                            <span class="text-yellow-600 font-bold text-xs">?</span>
+                        </div>
+                        <div class="bg-slate-800/40 border border-slate-700 p-5 hover:border-yellow-500/20 transition-all">
+                            <div class="flex justify-between items-start mb-2">
+                                <span class="text-white font-bold">Selective Disclosure</span>
+                                <span class="text-slate-500 text-xs font-mono">Ongoing</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Management communications focus exclusively on external factors, failing to disclose internal administrative negligence and security logic overrides.
+                            </p>
+                            <div class="mt-3 inline-flex items-center gap-2 text-[10px] font-bold text-yellow-500 uppercase tracking-tighter">
+                                Status: Transparency Gap
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-10 text-center">
+                    <p class="text-slate-500 text-xs uppercase tracking-widest">Submit censorship reports to <span class="text-slate-300">drift.victims.committee@proton.me</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <div class="text-red-600 text-4xl font-black mb-2">NON-COMPLIANT</div>
+                    <p class="text-slate-500 uppercase tracking-widest text-xs">Official Accountability Status</p>
+                </div>
+                <div class="bg-slate-800/50 p-8 space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-6 h-6 border-2 border-slate-600 rounded mt-1 shrink-0"></div>
+                        <div>
+                            <h4 class="text-white font-bold">Restore Consensus Integrity</h4>
+                            <p class="text-slate-400 text-sm">Eliminate administrative bypasses and return to a robust multisig consensus that ensures no single entity can override protocol security.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-6 h-6 border-2 border-slate-600 rounded mt-1 shrink-0"></div>
+                        <div>
+                            <h4 class="text-white font-bold">Comprehensive Security Audit Disclosure</h4>
+                            <p class="text-slate-400 text-sm">Provide a full explanation for the systematic failure of security standards and the use of 'manual overrides' that left user funds exposed.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-6 h-6 border-2 border-slate-600 rounded mt-1 shrink-0"></div>
+                        <div>
+                            <h4 class="text-white font-bold">Radical Management Transparency</h4>
+                            <p class="text-slate-400 text-sm">Leadership must shift from isolation to active engagement, providing direct communication and transparent updates on crisis resolution.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-6 h-6 border-2 border-slate-600 rounded mt-1 shrink-0"></div>
+                        <div>
+                            <h4 class="text-white font-bold">Admission of Liability</h4>
+                            <p class="text-slate-400 text-sm">Formal recognition of operational negligence and a clear commitment to a 1:1 user asset reimbursement strategy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="py-20 px-4 gradient-bg border-t border-slate-800">
+            <div class="max-w-3xl mx-auto bg-red-950/20 border border-red-900/50 p-12 text-center card-shadow">
+                <h3 class="text-3xl font-bold text-white mb-6">Join the Accountability Initiative</h3>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    We are consolidating verified on-chain loss data to prepare formal legal filings. Ensure your claim is documented in the official Damage Ledger to secure your right to restitution.
+                </p>
+                
+                <a href="https://tally.so/r/eq20B0" target="_blank" class="inline-block bg-red-600 hover:bg-red-700 text-white px-12 py-5 font-bold text-xl transition-all shadow-lg shadow-red-900/20 active:scale-95">
+                    Register Your Claim
+                </a>
+
+                <div class="mt-8 flex justify-center gap-6 text-xs text-slate-500 uppercase tracking-widest">
+                    <span>Verified On-Chain Data</span>
+                    <span class="text-slate-700">|</span>
+                    <span>Legal Privilege Protected</span>
+                    <span class="text-slate-700">|</span>
+                    <span>No Upfront Fees</span>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="py-12 px-4 border-t border-slate-800 text-center">
+            <p class="text-slate-500 mb-4 text-sm">&copy; 2026 Drift Victims Committee. A community-led forensic initiative for user asset protection.</p>
+            <div class="flex justify-center gap-6 text-slate-400 font-semibold uppercase text-xs">
+                <a href="https://github.com/DriftVictimsCommittee/drift-forensics" class="hover:text-white">GitHub</a>
+                <a href="https://x.com/DriftVictims" class="hover:text-white">Twitter/X</a>
+                <a href="https://t.me/DriftVictimsNews" class="hover:text-white">Telegram</a>
+                <a href="mailto:drift.victims.committee@proton.me" class="hover:text-white">Email</a>
+            </div>
+        </footer>
+
+    </body>
+</html>
+
+
+<script>
+    function updateTimer() {
+        const startDate = new Date("2026-04-01T20:59:00Z");
+        const now = new Date();
+        const diff = now - startDate;
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const m = Math.floor((diff / (1000 * 60)) % 60);
+        const s = Math.floor((diff / 1000) % 60);
+
+        document.getElementById('timer').innerText = 
+            `${d}d ${h.toString().padStart(2, '0')}h ${m.toString().padStart(2, '0')}m ${s.toString().padStart(2, '0')}s`;
+    }
+    setInterval(updateTimer, 1000);
+    updateTimer();
+</script>
