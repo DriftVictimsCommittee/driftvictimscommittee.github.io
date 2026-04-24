@@ -256,6 +256,52 @@
             </div>
         </section>
 
+        <!-- 
+        WHY THIS SECTION EXISTS:
+        This work is volunteer-driven.
+        Contributions directly support the research and investigation efforts.
+        -->
+        <section id="support" class="py-24 px-4 border-t border-slate-800 bg-slate-900/10">
+            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h3 class="text-xl font-bold text-white mb-4 uppercase tracking-tight">Back the Mission</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Contributions help cover the costs of keeping this initiative alive.
+                    </p>       
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <div class="space-y-3 font-mono">
+                        <div class="bg-slate-950 p-3 border border-slate-800 flex items-center justify-between gap-3">
+                            <div class="shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current text-slate-600">
+                                    <title>Solana</title>
+                                    <path fill="currentColor" d="M18.413 7.903a.62.62 0 0 1-.411.162H3.58c-.512 0-.77-.585-.416-.928l2.369-2.283a.6.6 0 0 1 .41-.17H20.42c.517 0 .77.591.41.935zm0 11.255a.62.62 0 0 1-.411.157H3.58c-.512 0-.77-.58-.416-.922l2.369-2.29a.6.6 0 0 1 .41-.163H20.42c.517 0 .77.585.41.928zm0-8.686a.62.62 0 0 0-.411-.157H3.58c-.512 0-.77.58-.416.922l2.369 2.29a.6.6 0 0 0 .41.163H20.42c.517 0 .77-.585.41-.928z"/>
+                                </svg>
+                            </div>
+
+                            <span id="donation-address" 
+                                onclick="copyAddress('HLTYEjE5jdZHEpFsHsdRLiVmNhMLqRuXyUeuk4ubc6od')"
+                                class="-mb-1 ml-auto text-slate-400 text-xs truncate cursor-pointer hover:text-white transition-colors duration-200 active:text-red-500"
+                                title="Click to copy">
+                                HLTYEjE5jdZHEpFsHsdRLiVmNhMLqRuXyUeuk4ubc6od
+                            </span>
+
+                            <a href="https://solscan.io/account/HLTYEjE5jdZHEpFsHsdRLiVmNhMLqRuXyUeuk4ubc6od" target="_blank" rel="noopener noreferrer" class="shrink-0" title="View in Explorer">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-none stroke-current stroke-2 text-slate-600 hover:text-white transition-colors">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <p class="text-[10px] text-slate-600 uppercase text-right tracking-tight">
+                            * Fully optional. Our efforts remain free for everyone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer class="py-12 px-4 border-t border-slate-800 text-center">
             <p class="text-slate-500 mb-4 text-sm">&copy; 2026 Drift Victims Committee. A community-led initiative for victims rights and asset recovery.</p>
             <div class="flex justify-center gap-6 text-slate-400 font-semibold uppercase text-xs">
@@ -271,6 +317,17 @@
 
 
 <script>
+
+    function copyAddress(address) {
+        navigator.clipboard.writeText(address).then(() => {
+            alert(`${address} copied to clipboard`);
+        })
+        .catch(err => {
+            console.error('Could not copy text: ', err);
+            alert("Failed to copy");
+        });
+    }
+
     function updateTimer() {
         const startDate = new Date("2026-04-01T20:59:00Z");
         const now = new Date();
